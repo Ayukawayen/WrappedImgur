@@ -2,6 +2,8 @@ let contractAddr = '0xbb460fbd275aAb7B5f7ED819b457cC15F5b255cf';
 
 function onInput() {
 	let imgurId = document.querySelector('input[name="imgurId"]').value;
+	document.querySelector('img').src = `https://i.imgur.com/${imgurId}.png`;
+	
 	let nftId = unwrap(imgurId);
 	
 	document.querySelector('input[name="nftId"]').value = nftId===false ? 'Error!!' : nftId;
